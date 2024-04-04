@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Chat</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Подключаем внешний CSS-файл -->
+</head>
+<body>
+    <h1>Create a New Chat</h1>
+    <form id="create-chat-form" method="post" action="{% url 'create_chat' %}">
+        {% csrf_token %}
+        <label for="chat-name">Chat Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="participants">Participants:</label>
+        <select id="participants" name="members" multiple>
+            {% for user in users %}
+                <option value="{{ user.id }}">{{ user.username }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <button type="submit">Create Chat</button>
+    </form>
+
+    <script src="{% static 'js/create_chat_script.js' %}"></script> <!-- Подключаем внешний JavaScript-файл -->
+</body>
+</html>

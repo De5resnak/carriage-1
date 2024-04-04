@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body data-chat-id="{{ chat_id }}">
+    <div class="sidebar">
+        <h2>Chats</h2>
+        <ul id="chat-list">
+        </ul>
+        <button id="create-chat-btn">New Chat</button>
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-panel">
+            <h3 id="chat-name"></h3>
+            <ul id="message-list">
+            </ul>
+        </div>
+
+        <div class="bottom-panel">
+            <form id="message-form">
+                <input type="text" id="message-input" placeholder="Введите сообщение">
+                <button type="submit">Отправить</button>
+                <a href="{% url 'profile_edit' %}" class="profile-edit-link">Edit Profile</a>
+                <a href="{% url 'logout' %}" class="logout-link">Logout</a>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class="profile-edit-page">
+
+    </div>
+
+    <script>
+        const chatId = "{{ chat_id }}";
+    </script>
+    <script src="{% static 'js/base_script.js' %}"></script>
+</body>
+</html>

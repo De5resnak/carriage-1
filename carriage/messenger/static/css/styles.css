@@ -1,0 +1,111 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.sidebar {
+    background-color: #333;
+    color: #fff;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 18px;
+    border-bottom: 1px solid #555;
+}
+
+#chat-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#chat-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.chat-panel {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+
+.profile-edit-page {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Кнопки */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+
+.message.sender {
+    background-color: #DCF8C6;
+}
+.bottom-panel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+.bottom-panel form {
+    display: flex;
+    align-items: center;
+}
+
+.bottom-panel input[type="text"] {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.profile-edit-link {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: blue;
+            border-radius: 5px;
+}
+
+.logout-link {
+    position: fixed;
+    top: 20px;
+    right: 120px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: blue;
+    border-radius: 5px;
+}
